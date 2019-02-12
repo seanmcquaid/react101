@@ -14,19 +14,19 @@
 </head>
 <body>
     <div id="root"></div>
-
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/babel" src="Card.js"></script>
     <script type="text/babel">
     // react takes the react elements and puts them in the actual dom
     // it needs to know what and where 
     // 1. WHAT
+    // console.log(data[0].course);
     const app = <div className="row">
-            <Card title="React. From the Beginning" />
-            <Card title="Unity Game Development" />
-            <Card title="Apache Kafka Series" />
-            <Card title="Music Production in Logic Pro X" />
+            <Card data = {data[0]} />
+            <Card data = {data[1]} />
+            <Card data = {data[2]} />
+            <Card data = {data[3]} />
         </div>;
-    console.log(app)
     // 2. WHERE
     const root = document.getElementById("root");
 
