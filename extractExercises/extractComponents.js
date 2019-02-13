@@ -61,7 +61,7 @@ class CommentBody extends React.Component{
         super(props)
     }
     formatDate(date){
-        new Date(date);
+        this.date = date
     }
     render(){
         return (
