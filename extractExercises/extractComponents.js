@@ -36,7 +36,7 @@ class UserInfo extends React.Component{
     render(){
         return (
             <div className="UserInfo">
-                <Avatar author={data[0]}/>
+                <Avatar author={data[0].author}/>
                 <div className="UserInfo-name">
                 {this.props.author.name}
                 </div>
@@ -51,7 +51,7 @@ class Avatar extends React.Component{
     }
     render(){
         return (
-        <img className="Avatar"src={this.props.author.avatarUrl}alt={this.props.author.name} />
+        <img className="Avatar" src={this.props.author.avatarUrl} alt={this.props.author.name} />
         )
     }
 }
@@ -60,16 +60,16 @@ class CommentBody extends React.Component{
     constructor(props){
         super(props)
     }
-    formatDate(date){
-        this.date = date
-    }
+    // formatDate(date){
+    //     let formattedDate = new Date(date);
+    // }
     render(){
         return (
             <div className="Comment-body">
                 <h1>{this.props.commentHeading}</h1>
                 <div className="Comment-text">{this.props.text}</div>
                 <div className="Comment-date">
-                {formatDate(this.props.date)}
+                {/* {formatDate(this.props.date)} */}
                 </div>
             </div>
         )
@@ -95,8 +95,8 @@ function Comment(props) {
     return (
     <div className="Comment">
         <UserInfo author={data[0].author}/>
-        <CommentBody author={data[0]}/>
-        <Badges userBadge={data[0]}/>
+        <CommentBody text={data[0].text}/>
+        <Badges userBadge={data[0].userBadge}/>
     </div>
     );
 }
