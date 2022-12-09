@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/seanmcquaid/react101#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
